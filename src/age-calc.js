@@ -1,6 +1,6 @@
 class Agifier {
-  constructor() {
-
+  constructor(age) {
+    this.earthAge = age;
   }
 
 }

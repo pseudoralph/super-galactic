@@ -1,4 +1,4 @@
-const lifeExpectancy = require('life-expectancy');
+const lifeExpectancy = require('./life-expectancy/index');
 
 class Agifier {
   constructor(age, country = 'United States of America', sex='male') {

@@ -24,6 +24,5 @@ function init() {
   console.log(`Age expecancy for male in ${country}: ${person.expectancy()}`);
   console.log(`Life left for ${person.earthAge}-year-old, Earth-bound ${person.sex}: ${person.lifeRemaining()} years`);
   console.log(`Life left for ${person.earthAge}-year-old, Mercury-bound ${person.sex}: ${person.lifeRemaining(person.mercuryAge())} years`);
-
   console.log(person.passedAvg());
 }

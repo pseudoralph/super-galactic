@@ -5,10 +5,12 @@ export function ui_lifeExpectancy() {
   
   let entry = document.getElementById('app');
   let payload = document.createElement('div');
-  let rawHtml = `<h5 class="card-header">Life expectancy</h5>
+  let rawHtml = `<h5 class="card-header">Super Galactic Age Calculator</h5>
   <div class="card-body">
   <div class="form-group">
   <form>
+  <label>Enter birthdate:</label>
+  <input type="date" name="bday"  class="form-control" id="dob" ><br>
   <label for="country">Country:</label>
   <select class="form-control" id="country">`;
       
@@ -25,18 +27,21 @@ export function ui_lifeExpectancy() {
   <input type="radio" id="female" name="gender" class="custom-control-input">
   <label class="custom-control-label" for="female">Female</label>
   </div>
-  <div class="custom-control custom-radio custom-control-inline">
+  <div class="form-group custom-control custom-radio custom-control-inline">
   <input type="radio" id="male" name="gender" class="custom-control-input">
   <label class="custom-control-label" for="male">Male</label>
   </div>
-  </form>
   </div>
+  <button class="btn btn-primary" id="calculate-age">Calculate</button>
+  </form>
   </div>`;
 
   payload.setAttribute('class','card');
   payload.innerHTML=rawHtml;
 
   entry.appendChild(payload);
+
+  return (document.getElementById('calculate-age'));
 
 }
 

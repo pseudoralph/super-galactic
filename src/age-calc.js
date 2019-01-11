@@ -35,6 +35,10 @@ class Agifier {
     return parseInt(this.earthAge/planetaryOffest);
   }
 
+  kiethRichards() {
+    
+  }
+
 }
 
 export { Agifier };

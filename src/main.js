@@ -16,8 +16,13 @@ console.log(`Life left for ${ralph.earthAge}-year-old, Mercury-bound ${ralph.sex
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'interactive') {
-    ui_lifeExpectancy();
+    ui_lifeExpectancy().addEventListener('click',init);
+
    
   }
 
 });
+
+function init() {
+  console.log('hi!!!');
+}

@@ -6,7 +6,7 @@ let ralph = new Agifier(35);
 
 console.log(ralph.earthAge);
 
-console.log(ralph.expectancyFactor('United States of America', 'female'));
+console.log(ralph.expectancy('United States of America', 'male'));
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'interactive') {
@@ -15,4 +15,3 @@ document.addEventListener('readystatechange', event => {
   }
 
 });
-

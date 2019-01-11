@@ -5,7 +5,7 @@ class Agifier {
     this.earthAge = age;
   }
 
-  expectancyFactor(country, sex) {
+  expectancy(country, sex) {
     return lifeExpectancy(country)[0][`${sex}`];
   }
 

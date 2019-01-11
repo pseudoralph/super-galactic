@@ -23,4 +23,8 @@ describe('Agifier', function() {
     expect(ralph.jupiterAge()).toEqual(2)
   });
 
+  it(`should return age expectancy for a male in the USA`, function() {
+    expect(ralph.expectancy('United States of America', 'male')).toEqual(76.9)
+  })
+
 });

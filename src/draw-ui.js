@@ -1,6 +1,8 @@
 const countries = require('life-expectancy/life.json').map(x=>x.country).sort();
 
 export function ui_lifeExpectancy() {
+  const usaIndex = countries.indexOf('United States of America');
+  
   let entry = document.getElementById('app');
   let payload = document.createElement('div');
   let rawHtml = `<h5 class="card-header">Life expectancy</h5>
@@ -11,7 +13,9 @@ export function ui_lifeExpectancy() {
   <select class="form-control" id="country">`;
       
   for (let c = 0; c<countries.length; c++) {
-    rawHtml+=`<option id="${c}">${countries[c]}</option>`; 
+    if (c === usaIndex) {
+      rawHtml+=`<option id="${c}" selected="selected">${countries[c]}</option>`;
+    } else {rawHtml+=`<option id="${c}">${countries[c]}</option>`; }
   }
 
   rawHtml+=`</select>

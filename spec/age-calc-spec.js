@@ -24,7 +24,7 @@ describe('Agifier', function() {
   });
 
   it(`should return age expectancy for a male in the USA`, function() {
-    expect(ralph.expectancy('United States of America', 'male')).toEqual(76.9)
+    expect(ralph.expectancy()).toEqual(76.9)
   })
 
 });

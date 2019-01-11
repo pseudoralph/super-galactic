@@ -1,12 +1,18 @@
 const lifeExpectancy = require('life-expectancy');
 
 class Agifier {
-  constructor(age) {
+  constructor(age, country = 'United States of America', sex='male') {
     this.earthAge = age;
+    this.country = country;
+    this.sex = sex;
   }
 
-  expectancy(country, sex) {
-    return lifeExpectancy(country)[0][`${sex}`];
+  shouldBeDead() {
+
+  }
+
+  expectancy() {
+    return lifeExpectancy(this.country)[0][`${this.sex}`];
   }
 
   mercuryAge() {

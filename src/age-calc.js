@@ -1,17 +1,12 @@
 const lifeExpectancy = require('life-expectancy');
-const rawData = require('life-expectancy/life.json')
 
 class Agifier {
   constructor(age) {
     this.earthAge = age;
   }
 
-  countries() {
-    return rawData;
-  }
-
   expectancyFactor(country, sex) {
-    return lifeExpectancy(country)[0][`${sex}`]
+    return lifeExpectancy(country)[0][`${sex}`];
   }
 
   mercuryAge() {

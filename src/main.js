@@ -1,0 +1,1 @@
+import { Agifier } from './age-calc'

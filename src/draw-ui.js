@@ -24,11 +24,11 @@ export function ui_lifeExpectancy() {
   </div>
   <div class="form-group">
   <div class="custom-control custom-radio custom-control-inline">
-  <input type="radio" id="female" name="gender" class="custom-control-input">
+  <input type="radio" id="female" name="sex" class="custom-control-input">
   <label class="custom-control-label" for="female">Female</label>
   </div>
   <div class="form-group custom-control custom-radio custom-control-inline">
-  <input type="radio" id="male" name="gender" class="custom-control-input">
+  <input type="radio" id="male" name="sex" class="custom-control-input">
   <label class="custom-control-label" for="male">Male</label>
   </div>
   </div>

@@ -1,27 +1,30 @@
 class Agifier {
   constructor(age) {
     this.earthAge = age;
+  }
 
-    this.lifeExpectFactor = 1;
+  expectancyFactor() {
+    
   }
 
   mercuryAge() {
-    const offset = .24;
-
-    return parseInt(this.earthAge/offset);
-
+    const planetaryOffest = .24;
+    return parseInt(this.earthAge/planetaryOffest);
   }
 
   venusAge() {
-
+    const planetaryOffest = .62;
+    return parseInt(this.earthAge/planetaryOffest);
   }
 
   marsAge() {
-
+    const planetaryOffest = 1.88;
+    return parseInt(this.earthAge/planetaryOffest);
   }
 
   jupiterAge() {
-
+    const planetaryOffest = 11.86;
+    return parseInt(this.earthAge/planetaryOffest);
   }
 
 

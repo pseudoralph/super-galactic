@@ -7,8 +7,8 @@ class Agifier {
     this.sex = sex;
   }
 
-  shouldBeDead() {
-
+  lifeRemaining(planetAge = this.earthAge) {
+    return parseInt(this.expectancy() - planetAge);
   }
 
   expectancy() {
@@ -35,9 +35,6 @@ class Agifier {
     return parseInt(this.earthAge/planetaryOffest);
   }
 
-
-
 }
-
 
 export { Agifier };

@@ -7,6 +7,14 @@ class Agifier {
     this.sex = sex;
   }
 
+  passedAvg(planetAge = this.earthAge) {
+    if (this.lifeRemaining(planetAge) < 0) {
+      return `You've made it ${Math.abs(this.lifeRemaining(planetAge))} year${Math.abs(this.lifeRemaining(planetAge)) === 1 ? '' : 's'} past age expectancy. Tread lightly`;
+    }
+    return `You're still alive. Why are you wasting time calculating your age on different planets? Go out and live life!`;
+
+  }
+
   lifeRemaining(planetAge = this.earthAge) {
     return parseInt(this.expectancy() - planetAge);
   }

@@ -21,8 +21,9 @@ function init() {
   console.log(`Venus age: ${person.venusAge()}`);
   console.log(`Mars age: ${person.marsAge()}`);
   console.log(`Jupiter age: ${person.jupiterAge()}`);
-  console.log(`Age expecancy for male American: ${person.expectancy()}`);
+  console.log(`Age expecancy for male in ${country}: ${person.expectancy()}`);
   console.log(`Life left for ${person.earthAge}-year-old, Earth-bound ${person.sex}: ${person.lifeRemaining()} years`);
   console.log(`Life left for ${person.earthAge}-year-old, Mercury-bound ${person.sex}: ${person.lifeRemaining(person.mercuryAge())} years`);
 
+  console.log(person.passedAvg());
 }

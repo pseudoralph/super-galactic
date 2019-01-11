@@ -35,4 +35,11 @@ describe('Agifier', function() {
     expect(ralph.lifeRemaining(ralph.mercuryAge())).toEqual(-68);
   });
 
+  it(`it should tell you how much life you have left`, function() {
+    expect(ralph.passedAvg()).toContain("age")
+  })
+
 });
+
+
+// console.log(person.passedAvg());

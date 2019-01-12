@@ -1,6 +1,6 @@
 const countries = require('./life-expectancy/life.json').map(x=>x.country).sort();
 
-export function ui_lifeExpectancy() {
+function ui_lifeExpectancy() {
   const usaIndex = countries.indexOf('United States of America');
   
   let entry = document.getElementById('app');
@@ -42,6 +42,73 @@ export function ui_lifeExpectancy() {
   entry.appendChild(payload);
 
   return (document.getElementById('calculate-age'));
-
 }
 
+function ui_planetaryAge(person) {  
+  let entry = document.getElementById('output');
+  let planets = [
+    {
+      name: 'Mercury',
+      nameified: 'Mercurian',
+      image: '',
+      planetAgeGetter: person.mercuryAge(),
+      planetExpectancy: person.passedAvg(person.mercuryAge())
+    },{
+      name: 'Venus',
+      nameified: 'Venusian',
+      image: '',
+      planetAgeGetter: person.venusAge(),
+      planetExpectancy: person.passedAvg(person.venusAge())
+    },{
+      name: 'Mars',
+      nameified: 'Martian',
+      image: '',
+      planetAgeGetter: person.marsAge(),
+      planetExpectancy: person.passedAvg(person.marsAge())
+    },{
+      name: 'Jupiter',
+      nameified: 'Juptiterian',
+      image: '',
+      planetAgeGetter: person.jupiterAge(),
+      planetExpectancy: person.passedAvg(person.jupiterAge())
+    }];
+
+  let rawHtml = `<div id="accordion">
+  <div class="card">
+  <div class="card-header" id="heading0">
+  <h5 class="mb-0">
+  <button class="btn btn-link" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
+  Earth
+  </button>
+  </h5>
+  </div>
+  <div id="collapse0" class="collapse show" aria-labelledby="heading0" data-parent="#accordion">
+  <div class="card-body">
+  <p>Earth age: <code>${person.earthAge}</code></p>
+  <p>Age expecancy for a <code>${person.sex}</code> living in the <code>${person.country}</code>: <code>${person.expectancy()}</code> years</p>
+  </div>
+  </div>
+  </div>`;
+
+  for (let i = 0; i <planets.length; i++) {
+    rawHtml += `<div class="card">
+    <div class="card-header" id="heading${i+1}">
+    <h5 class="mb-0">
+    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse${i+1}" aria-expanded="false" aria-controls="collapse${i+1}">
+    ${planets[i].name}
+    </button>
+    </h5>
+    </div>
+    <div id="collapse${i+1}" class="collapse" aria-labelledby="heading${i+1}" data-parent="#accordion">
+    <div class="card-body">
+    <p>${planets[i].nameified} age: <code>${planets[i].planetAgeGetter}</code></p>
+    <p>Age expecancy for a <code>${person.sex}</code> living in the <code>${person.country}</code>: <code>${person.expectancy()}</code></p>
+    <p>${planets[i].planetExpectancy}</p>
+    </div>
+    </div>
+    </div>`;
+  }
+  entry.innerHTML = rawHtml;
+}
+
+export { ui_lifeExpectancy, ui_planetaryAge };

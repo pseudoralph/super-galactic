@@ -9,7 +9,7 @@ class Agifier {
 
   passedAvg(planetAge = this.earthAge) {
     if (this.lifeRemaining(planetAge) < 0) {
-      return `You've made it ${Math.abs(this.lifeRemaining(planetAge))} year${Math.abs(this.lifeRemaining(planetAge)) === 1 ? '' : 's'} past age expectancy. Tread lightly`;
+      return `You've made it <code>${Math.abs(this.lifeRemaining(planetAge))}</code> year${Math.abs(this.lifeRemaining(planetAge)) === 1 ? '' : 's'} past age expectancy. Great job, space cadet 👨‍🚀`;
     }
     return `You're still alive. Why are you wasting time calculating your age on different planets? Go out and live life!`;
 
@@ -20,9 +20,10 @@ class Agifier {
   }
 
   expectancy() {
+    // lifeExpectancy returns an array
     return lifeExpectancy(this.country)[0][`${this.sex}`];
   }
-
+  
   mercuryAge() {
     const planetaryOffest = .24;
     return parseInt(this.earthAge/planetaryOffest);

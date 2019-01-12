@@ -17,6 +17,8 @@ Using a person's Earth age, the Super Galactic Age Calculator displays that pers
 * launch dev environment using `npm run start`
   * a new browser window will open with `localhost:8080`
 
+This webapp can also be viewed at [https://pseudoralph.github.io/super-galactic/](https://pseudoralph.github.io/super-galactic/)
+
 ## Technologies Used
 
 JS, wepback

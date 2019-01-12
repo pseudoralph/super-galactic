@@ -1,4 +1,15 @@
+body {
+  margin-top: 15px!important;
+}
+
 code {
   padding: 3px;
   background: #f2f0f0;
+}
+
+.planet-img {
+  margin: 0 15px 0 -10px;
+  filter: sepia(30%) brightness(.8)  contrast(140%);
+  height: 28px;
+  width: 28px;
 }

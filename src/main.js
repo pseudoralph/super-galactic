@@ -1,7 +1,6 @@
 import { Agifier } from './age-calc';
 import { ui_lifeExpectancy, ui_planetaryAge } from './draw-ui';
 import { age as presentAge }  from './get-age';
-// import { planetImages } from './planet-images';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';

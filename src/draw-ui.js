@@ -1,3 +1,6 @@
+import { earth, jupiter, mars, mercury, venus } from './planet-images';
+import { imgTagify } from './img-tag-maker';
+
 const countries = require('./life-expectancy/life.json').map(x=>x.country).sort();
 
 function ui_lifeExpectancy() {
@@ -50,25 +53,25 @@ function ui_planetaryAge(person) {
     {
       name: 'Mercury',
       nameified: 'Mercurian',
-      image: '',
+      image: imgTagify(mercury),
       planetAgeGetter: person.mercuryAge(),
       planetExpectancy: person.passedAvg(person.mercuryAge())
     },{
       name: 'Venus',
       nameified: 'Venusian',
-      image: '',
+      image: imgTagify(venus),
       planetAgeGetter: person.venusAge(),
       planetExpectancy: person.passedAvg(person.venusAge())
     },{
       name: 'Mars',
       nameified: 'Martian',
-      image: '',
+      image: imgTagify(mars),
       planetAgeGetter: person.marsAge(),
       planetExpectancy: person.passedAvg(person.marsAge())
     },{
       name: 'Jupiter',
       nameified: 'Juptiterian',
-      image: '',
+      image: imgTagify(jupiter),
       planetAgeGetter: person.jupiterAge(),
       planetExpectancy: person.passedAvg(person.jupiterAge())
     }];
@@ -78,7 +81,7 @@ function ui_planetaryAge(person) {
   <div class="card-header" id="heading0">
   <h5 class="mb-0">
   <button class="btn btn-link" data-toggle="collapse" data-target="#collapse0" aria-expanded="true" aria-controls="collapse0">
-  Earth
+  <span id="earth-img"></span>Earth
   </button>
   </h5>
   </div>
@@ -95,7 +98,7 @@ function ui_planetaryAge(person) {
     <div class="card-header" id="heading${i+1}">
     <h5 class="mb-0">
     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse${i+1}" aria-expanded="false" aria-controls="collapse${i+1}">
-    ${planets[i].name}
+    <span id="${planets[i].name.toLowerCase()}-img"></span>${planets[i].name}
     </button>
     </h5>
     </div>
@@ -109,6 +112,13 @@ function ui_planetaryAge(person) {
     </div>`;
   }
   entry.innerHTML = rawHtml;
+
+  document.getElementById('earth-img').appendChild(imgTagify(earth));
+
+  for (let i=0; i < planets.length; i++) {
+    document.getElementById(`${planets[i].name.toLowerCase()}-img`).appendChild(planets[i].image);
+  }
+
 }
 
 export { ui_lifeExpectancy, ui_planetaryAge };

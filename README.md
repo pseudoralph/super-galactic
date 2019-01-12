@@ -13,9 +13,9 @@ Using a person's Earth age, the Super Galactic Age Calculator displays that pers
 * clone this repository using `git clone https://github.com/pseudoralph/super-galactic.git`
 * navigate into this repo and download dependencies: `npm install`
 * run specs using `npm run test`
-  * a new browser window will open with `localhost:9876`
+  * a new browser window will open at `localhost:9876`
 * launch dev environment using `npm run start`
-  * a new browser window will open with `localhost:8080`
+  * a new browser window will open at `localhost:8080`
 
 This webapp can also be viewed at [https://pseudoralph.github.io/super-galactic/](https://pseudoralph.github.io/super-galactic/)
 
@@ -24,7 +24,7 @@ This webapp can also be viewed at [https://pseudoralph.github.io/super-galactic/
 JS, wepback
 
 ## Notes
-* [hemanth](https://github.com/hemanth/life-expectancy): life-expectancy package has been hard-coded into this repo (npmjs tag.gz bundle is missing critical file)
+* [hemanth](https://github.com/hemanth/life-expectancy): life-expectancy package has been hard-coded into this repo (npmjs tar.gz bundle is missing critical file)
 
 ## Objectives
 

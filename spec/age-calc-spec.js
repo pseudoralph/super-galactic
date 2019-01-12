@@ -40,3 +40,6 @@ describe('Agifier', function() {
   })
 
 });
+
+
+// console.log(person.passedAvg());

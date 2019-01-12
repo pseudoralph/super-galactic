@@ -5,41 +5,44 @@
 #### Ralph Perdomo. January 11, 2019
 
 ## Description
-Using a person's Earth age, the Super Galactic Age Calculator displays that person's age from Mercury, Venus, Mars, and Jupiter.
+Using a person's Earth age, the Super Galactic Age Calculator displays that person's age from Mercury, Venus, Mars, and Jupiter. Uses hemanth's life-expectancy package (see notes below)
 
 
 ## Setup/Installation Requirements
 
 * clone this repository using `git clone https://github.com/pseudoralph/super-galactic.git`
-* navigate into this repo and download dependencies using manager of your choice: `npm install` or `yarn install`
-* runs specs using `npm run test` or `yarn run test`.
+* navigate into this repo and download dependencies: `npm install`
+* run specs using `npm run test`
   * a new browser window will open with `localhost:9876`
-* launch dev environment in browser using `npm run start` or `yarn run start`.
+* launch dev environment using `npm run start`
   * a new browser window will open with `localhost:8080`
 
 ## Technologies Used
 
 JS, wepback
 
+## Notes
+* [hemanth](https://github.com/hemanth/life-expectancy): life-expectancy package has been hard-coded into this repo (npmjs tag.gz bundle is missing critical file)
+
 ## Objectives
 
-- [ ] Specs were committed before any code.
+- [x] Specs were committed before any code.
 
-- [ ] Business logic is thoroughly tested with Jasmine.
+- [x] Business logic is thoroughly tested with Jasmine.
 
-- [ ] Karma is set up correctly.
+- [x] Karma is set up correctly.
 
-- [ ] Project utilizes ES6 features including classes, let and const.
+- [x] Project utilizes ES6 features including classes, let and const.
 
-- [ ] Dependencies are managed with npm.
+- [x] Dependencies are managed with npm.
 
-- [ ] Application uses webpack to lint, bundle, and process code.
+- [x] Application uses webpack to lint, bundle, and process code.
 
-- [ ] Project is in a polished, portfolio-quality state. (Clear code presentation, error free, complete README, commit history, etc.)
+- [x] Project is in a polished, portfolio-quality state. (Clear code presentation, error free, complete README, commit history, etc.)
 
-- [ ] Required functionality was in place by the Friday deadline.
+- [x] Required functionality was in place by the Friday deadline.
 
-- [ ] Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
+- [x] Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
 ### License
 

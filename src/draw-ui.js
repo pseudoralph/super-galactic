@@ -1,4 +1,4 @@
-const countries = require('././life-expectancy/life.json').map(x=>x.country).sort();
+const countries = require('./life-expectancy/life.json').map(x=>x.country).sort();
 
 export function ui_lifeExpectancy() {
   const usaIndex = countries.indexOf('United States of America');

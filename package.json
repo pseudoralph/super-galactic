@@ -1,6 +1,7 @@
 {
   "name": "super-galactice-age-calculator",
   "version": "1.0.0",
+  "description": "An intra-solar system age calculator",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -8,6 +9,7 @@
     "lint": "eslint src/*.js",
     "test": "karma start karma.conf.js"
   },
+  "author": "Ralph Perdomo",
   "license": "MIT",
   "devDependencies": {
     "clean-webpack-plugin": "^1.0.0",

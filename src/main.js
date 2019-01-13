@@ -4,7 +4,6 @@ import { age as presentAge }  from './get-age';
 import './styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
-// import $ from "jquery";
 
 document.addEventListener('readystatechange', event => {
   if (event.target.readyState === 'interactive') {
